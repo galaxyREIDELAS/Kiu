@@ -16,9 +16,9 @@
     "ccc":{  
       "admin":                null,
       "ambassador":           null,
-      "host":                 "#565656",
-      "cohost":               "#565656",
-      "manager":              "#565656",
+      "host":                 "#808080",
+      "cohost":               "#808080",
+      "manager":              "#808080",
       "bouncer":              "#808080",
       "rdj":                  "#808080",
       "subscriber":           null,
