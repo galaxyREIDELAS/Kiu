@@ -1,0 +1,42 @@
+{
+    "room":                     "⚡ EAT Brasil ♫",
+    "author":                   "-galaxy",
+    "css":                      "https://rawgit.com/GalaxyDELAS/Auu/master/rw-v1.css",
+    "icon":                     "",
+    "rules": {
+        "allowAutorespond":     true,
+        "allowAutowoot":        true,
+        "allowAutojoin":        false,
+        "allowAutograb":        true,
+        "allowSmartVote":       true,
+        "allowEmotes":          true,
+        "allowShowingMehs":     true,
+        "forceSmartVote":       false
+    },
+    "ccc":{  
+      "admin":                null,
+      "ambassador":           null,
+      "host":                 "#808080",
+      "cohost":               "#808080",
+      "manager":              "#808080",
+      "bouncer":              "#808080",
+      "rdj":                  "#808080",
+      "subscriber":           null,
+      "silversubscriber":     null,
+      "friend":               null,
+      "user":                 null
+   },
+   "images":{  
+      "background":           "https://i.imgur.com/40k8BQS.jpg",
+      "playback":             null,
+      "admin":                null,
+      "ambassador":           null,
+      "host":                 null,
+      "cohost":               null,
+      "manager":              null,
+      "bouncer":              null,
+      "rdj":                  null,
+      "subscriber":           null,
+      "silversubscriber":     null
+    }
+}

@@ -1,0 +1,879 @@
+/* galaxy  */
+
+.userInfo.dj .votedBackgroundColor { background-color: #721022; font-weight: bold; }
+.userInfo.woot .votedBackgroundColor { background-color: #721022; }
+.userInfo.meh .votedBackgroundColor { background-color: #721022; }
+#plugbot-userlist { position: absolute; top: 54px; width: 220px; max-height: 445px; overflow: hidden;
+outline: none; z-index: 11; overflow-y: auto; overflow-x: hidden; }
+#nwootCreator { margin-bottom: 0 px; width: 220px;  height: auto; cursor: move }
+.ulh1 { background-color: #000000; border-bottom:1px solid #444; border-collapse: collapse; }
+.ulh2 { font-size:22px; background: rgb(37,141,200); /* Old browsers */ 
+    background: -moz-linear-gradient(top, rgba(37,141,200,1) 0%, rgba(37,141,200,1) 100%); /* FF3.6+ */ 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(37,141,200,1)), color-stop(100%,rgba(37,141,200,1))); /* Chrome,Safari4+ */ 
+    background: -webkit-linear-gradient(top,  rgba(37,141,200,1) 0%,rgba(37,141,200,1) 100%); /* Chrome10+,Safari5.1+ */ 
+    background: -o-linear-gradient(top,  rgba(37,141,200,1) 0%,rgba(37,141,200,1) 100%); /* Opera 11.10+ */ 
+    background: -ms-linear-gradient(top,  rgba(37,141,200,1) 0%,rgba(37,141,200,1) 100%); /* IE10+ */ 
+    background: linear-gradient(to bottom,  rgba(37,141,200,1) 0%,rgba(37,141,200,1) 100%); /* W3C */ 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2F4F4F', endColorstr='#2F4F4F',GradientType=0 ); /* IE6-9 */ }
+.ulh3 { text-decoration:none; font-weight:bold; cursor:pointer; color:rgb(37,141,200); font-size:13px; }
+.ul-admin { color: #42A5DC; }
+.ul-ambassador{ color: #89be6c; }
+    .ul-bouncer,.ul-dj, .ul-host,.ul-manager { color: #CCABFF;}
+.ul-user { color: white; }
+.userlj{
+ background: url(https://cdn.plug.dj/_/static/images/icons.704234c7dc6818d8d01262d56bc8177b8ce6cd7d.jpg) 314px -349px;
+ position: absolute; width: 15px; height: 15px; top: 7px;  left: 7px; }
+
+/* Itens relacionados ao passar o mouse por cima! */ 
+
+.row:hover, #user-lists .list .user:hover, .media-list .actions {
+text-decoration: none;
+background-color: rgba(213, 28, 28, 0.22) !important;
+background: linear-gradient(to right,rgba(255, 255, 255, 0.05) 0,rgba(255, 255, 255, 0.49) 100%) !important;
+-webkit-transition: 200ms linear 0s;
+-moz-transition: 200ms linear 0s; -o-transition: 200ms linear 0s; transition: 300ms linear 0,1s; outline: 0 none;
+text-shadow: -1px 1px 8px #000000, 1px -1px 8px #000000; }
+#user-rollover .actions .action:hover   {  background-color: rgba(102, 40, 114, 0.22) } /* Ache uma cor melhor assis */
+#user-rollover { background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.75) 0, rgba(0, 0, 0, 0.75) 100%);
+background: linear-gradient(to bottom,rgba(0, 0, 0, 0.75) 0,rgba(0, 0, 0, 0.75) 100%); }
+#user-rollover .info, #user-rollover .info .badge-box, #chat-messages .badge-box, .user-content.profile .meta .badge-box {background: none;}
+  
+/* Itens Relacionados ao chat, delays e cores do /me */
+
+#chat .emote { border-left: rgba(174, 69, 189, 1) 3px solid !important; background-color: rgba(190, 28, 213, 0.22) 
+!important; background: linear-gradient(to right,rgba(255, 118, 118, 0.05) 0,rgba(255, 0, 194, 0.27) 100%) !important; }
+#chat .message:nth-child(2n+1),#chat .mention:nth-child(2n+1),#chat .skip:nth-child(2n+1),#chat .moderation:nth-child(2n+1),
+#chat .emote:nth-child(2n+1),#chat .update:nth-child(2n+1),#chat .welcome:nth-child(2n+1) #chat .emote, #chat .mention,
+#chat .message, #chat .moderation, #chat .skip, #chat .system, #chat .update, #chat .welcome {
+background-color: rgba(17, 19, 23, 0.32); -webkit-animation:fadein 0.6s;  -moz-animation:fadein 0.6s;
+-ms-animation:fadein 0.6s;  -o-animation:fadein 0.6s; animation:fadein 0.6s; }
+#chat-input.focused {
+    background: linear-gradienthsla(290,55%,25%,.8)
+!important;
+    box-shadow:
+        inset 0 0 0 0px hsla(290,55%,40%,.8),
+    0 0 0px 1.20px hsla(290,55%,40%,.8) !important;
+}
+    
+/* Itens Relacionados ao Menu do ícone do plug! */
+
+#app-menu {max-width: 400px    !important;}
+#app-menu .list {max-width: 400px !important;}
+#app-menu, #app-menu.open { -webkit-transition: 500ms ease; transition: 500ms ease; }
+#app-menu .list { -webkit-transition: 500ms ease; transition: 500ms ease; opacity: 0; }
+#app-menu.open .list { -webkit-transition: 500ms ease; transition: 500ms ease; opacity: 1; }
+#app-menu, #app-menu .button { background: linear-gradient(to bottom,rgba(255, 255, 255, 0) 0,rgba(0, 0, 0, 0) 100%) !important; }
+#app-menu div { background-color: rgba(0, 0, 0, 0.8) !important; }
+#app-menu.open > .button { background-color: rgba(0,0,0,0.85) !important; }
+#app-menu {border-right-width: 0 !important; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;}
+#app-menu div { background-color: rgba(0, 0, 0, 0) !important; }
+#app-menu.open { background-color: #282c35; }
+#app-menu { left: -177px; max-width: 300px; background-color: rgba(69, 69, 69, 0.25); }
+#app-menu .button i { left: 189px; }
+#app-menu .item:hover  { background: #000 !important; box-shadow: 0 0 15px #fff !important; }
+.dark-label {color: #fff;}
+
+/* Itens relacionados a playlist! */
+
+.media-list .row.now-playing, #playlist-button, .media-list .selected .actions, .media-list .row.selected, 
+.media-list .row.now-playing .actions, #playlist-menu .menu .row.selected {  background: linear-gradient(to bottom, #bc1234 0px, #0a090a 100%) !important; box-shadow: 0 0 10px rgba(188, 18, 52, 1) !important;} 
+.media-list.history .row.selected, .media-list.history .selected .actions {  background:#bc1234!important; 
+box-shadow: 0 0 10px #bc1234 !important; }
+.media-list.history .score .grabs span {   color: #aa74ff; }
+#playlist-create:hover { box-shadow: 0 0 10px #0a090a !important; background: linear-gradient(to bottom, #bc1234 0px, #0a090a 100%) !important; }
+#playlist-import:hover { box-shadow: 0 0 10px #0a090a !important; background: linear-gradient(to bottom, #bc1234 0px, #0a090a 100%)!important; }
+#playlist-edit-button { background: linear-gradient(to bottom, #bc1234 0px, #0a090a 100%); } 
+#playlist-edit-button:hover { background: linear-gradient(to bottom, #bc1234 0px, #bc1234 100%); } 
+#playlist-shuffle-button { background: linear-gradient(to bottom, #bc1234 0px, #0a090a 100%); } 
+#playlist-shuffle-button:hover { background: linear-gradient(to bottom, #bc1234 0px, #bc1234 100%); } 
+#playlist-delete-button { background: linear-gradient(to bottom, #bc1234 0px, #0a090a 100%); } 
+#playlist-activate-button span, #playlist-menu .menu .row .count, .media-list.history .meta .timestamp { color: #FFFFFF; }
+#playlist-menu .title { color:  #e8eaf2;; }
+#playlist-delete-button:hover { background: linear-gradient(to bottom, #bc1234 0px, #bc1234 100%); } 
+#playlist-shuffle-button:hover { background: linear-gradient(to bottom, #bc1234 0px, #bc1234 100%); } 
+#playlist-menu {    background: black-transparent; opacity: 0.9;  text-shadow: 1px -1px #000;  } 
+ #playlist-activate-button { background: linear-gradient(to bottom, #0a090a 0px, #0a090a 100%) !important; border-radius: 20px 0px 0px 20px !important; } 
+#search {background: #000 !important;  }
+
+
+/* Itens relacionados ao Menu de comunidades! */
+
+
+#dashboard .search { border-radius: 20px; background:  #000; }
+#dashboard { background-color: rgba(0, 0, 0, 0.89) !important;  }
+.communities .grid .cell {border-radius: 20px; }
+.tab-menu button.selected { background: linear-gradient(to bottom,rgba(188, 18, 52, 0.8) 0,rgba(188, 18, 52, 1) 100%) !important; border-radius: 30px; }
+.communities .grid .cell .favorite {
+    top: 0;
+    right: 0;
+    width: 43px;
+    height: 43px;
+    background: rgba(197, 152, 64, 0);}
+.communities .grid .cell .meta {
+    position: relative;
+    z-index: 2;
+    margin-top: 186px;
+    width: 100%;
+    height: 90px;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all .25s ease-in;}
+.communities .grid .cell .meta .join {
+    border-radius: 10px;
+    border: 1px solid rgba(188, 18, 52, 0.63);
+    background: rgb(0, 0, 0);}
+.communities .grid .cell .meta .join:hover {
+    background: linear-gradient(hsl(348, 61%, 53%), hsla(348, 62%, 21%, 0.95));}
+.grid .cell .bar, .grid .cell .meta {
+background: linear-gradient(hsla(0, 0%, 0%, 0.94), hsla(0, 0%, 0%, 0.94)) !important;}
+#chat .welcome {
+    color: #8e4386;}
+.grid .cell .top .expires span {
+	color: hsl(30,100%,50%) !important;}
+.user-content.communities .grid .cell, .grid .cell {
+    background: radial-gradient(hsl(0, 0%, 0%), hsl(0, 0%, 0%)) !important;}
+.grid .cell .meta .host {
+	text-align: center !important;
+	top: 6px !important;
+	color: #eee !important;}
+
+ /* Itens relacionados aos círculos de status! */
+
+.available  .thumb.medium, .available  .thumb.large { border: 2px solid #599d24; box-shadow: 0 0 10px 5px #599d24; }
+#user-rollover .meta.available .status i { border: 2px solid #599d24; box-shadow: 0 0 10px 5px #599d24; }
+.available  .thumb.small { border: 2px solid #599d24; }
+#footer-user .menu.status .item.available i { border: 2px solid #599d24; box-shadow: 0 0 10px 5px #599d24; }
+#user-rollover .meta.available .status span { color: #599d24; }
+#user-rollover .meta.available { background: linear-gradient(to bottom,rgba(76, 122, 50, 0.7) 0,rgba(28, 31, 37, 1) 100%); opacity: .85; } 
+.gaming .thumb.medium, .gaming .thumb.large  { border: 2px solid #0088cb; box-shadow: 0 0 10px 5px #0088cb; }
+.gaming .thumb.small  { border: 2px solid #0088cb; }
+#user-rollover .meta.gaming .status i { border: 2px solid #0088cb; box-shadow: 0 0 10px 5px #0088cb; }
+#user-rollover .meta.gaming .status span { color: #0088cb; }
+#footer-user .menu.status .item.gaming i { border: 2px solid #0088cb; box-shadow: 0 0 10px 5px #0088cb; }
+#user-rollover .meta.gaming { background: linear-gradient(to bottom,rgba(0,0,128, 0.4) 0,rgba(28, 31, 37, 1) 100%); opacity: .85;   } 
+.working .thumb.large, .working .thumb.medium { border: 2px solid #4169E1; box-shadow: 0 0 10px 5px #4169E1; }
+.working .thumb.small { border: 2px solid #4169E1; }
+#user-rollover .meta.working .status i { border: 2px solid #4169E1; box-shadow: 0 0 10px 5px #4169E1; }
+#user-rollover .meta.working .status span { color: #4169E1; }
+#footer-user .menu.status .item.working i { border: 2px solid #4169E1; box-shadow: 0 0 10px 5px #4169E1; }
+#user-rollover .meta.working { background: linear-gradient(to bottom,rgba(132, 41, 25, 0.7) 0,rgba(28, 31, 37, 1) 100%); opacity: .85; }
+.away .thumb.large, .away .thumb.medium { border: 2px solid #b29600; box-shadow: 0 0 10px 5px #b29600; }
+.away .thumb.small { border: 2px solid #b29600; }
+.thumb .background {background: linear-gradient(to bottom,rgba(255, 255, 255, 0.25) 0,rgba(0, 0, 0, 0.75) 100%) !important;  border-radius: 30px; }
+#user-rollover .meta.away .status i { border: 2px solid #b29600; box-shadow: 0 0 10px 5px #b29600; }
+#footer-user .menu.status .item.away i { border: 2px solid #b29600; box-shadow: 0 0 10px 5px #b29600; }
+#user-rollover .meta.away { background: linear-gradient(to bottom,rgba(109, 92, 40, 0.5) 0,rgba(28, 31, 37, 1) 100%);  opacity: .85;}
+#footer-user .menu {background-color: rgba(0,0,0,0.85) !important; }
+ #user-rollover .meta .joined {color: #eee;}
+
+/* Itens Relacionados ao mouse sobre o vídeo atual ! */
+
+#playback-controls .button.snooze { background: linear-gradient(to bottom,rgba(68, 68, 68, 0) 0,rgba(180, 71, 216, 0.73) 100%) !important;
+box-shadow: 0 0 7px #000 !important; }
+#playback-controls .button.refresh { background: linear-gradient(to bottom,rgba(68, 68, 68, 0) 0,rgba(0, 181, 230, 1) 100%);
+box-shadow: 0 0 7px #000 !important; }
+#playback-controls .button.hd { background: linear-gradient(to bottom,rgba(68, 68, 68, 0.6) 0,rgba(0, 0, 0, 0.73) 100%);
+box-shadow: 0 0 7px rgba(0, 0, 0, 1) !important; }
+
+/* Custom icons */
+
+.icon { background-image: url('https://imgur.com/CE8x4pn.png'); } /* Só adicione ícones abaixo DESTE ! */
+
+.icon.icon-chat-songlink { background: url(https://i.imgur.com/4ySq2jE.png) !important;
+background-repeat: no-repeat !important;  top: 8px !important; left: 28px !important; }
+.icon.icon-chat-imagelink { background: url(https://i.imgur.com/h56ipwJ.png) !important;
+background-repeat: no-repeat !important; top: 8px !important; left: 28px !important; }
+.icon.icon-chat-privatemessage { background: url(https://i.imgur.com/D8PrBz8.png) !important;
+background-repeat: no-repeat !important; width: 30px; height: 30px; left: 4px !important; }
+.icon.icon-chat-privatemessageall { background: url(https://i.imgur.com/AkyEedW.png) !important; 
+background-repeat: no-repeat !important; width: 30px; height: 30px; left: 4px !important; }
+.icon-origeminfo { background: url('https://i.imgur.com/MDYBtAf.png'); width: 30px; height: 30px; }
+.icon-origem-active { background: url('https://i.imgur.com/ATr0Z24.png'); }
+#your-active-playlist > .icon-check-purple{ background: url('https://i.imgur.com/RpYlWSk.png') !important; top: 15px; }
+#user-menu .item > .icon-history-white { background: url('https://i.imgur.com/EdPgEwe.png') !important; top: 12px; }
+#footer-user .item > .icon-history-white { background: url('https://i.imgur.com/EdPgEwe.png') !important; top: 12px; }
+
+/* Evento do ícone do meh! */
+#user-lists .list { -webkit-animation:fadein 0.5s; -ms-animation:fadein 0.5s; animation:fadein 0.5; }
+#user-lists .list.room .user .icon-meh{ left:auto; right:8px; top:-1px }
+
+/* Itens relacionados ao menu do seu  perfil! */
+
+.user-content.profile .notifications .row, .dropdown dd .row:hover, #user-menu .item.selected {background: #8e4386 !important; }
+.user-content.profile .notifications .row .timestamp { color: #eee; }
+#user-menu { background: rgba(10, 11, 12, 0.26) !important; }
+.dropdown dt { border-radius: 30px; background: linear-gradient(to bottom,rgba(10, 11, 12, 0.8) 0,rgba(188, 18, 52, 1) 100%) !important; box-shadow: 0 0 15px #bc1234 !important; } 
+.dropdown, #user-settings .tab-menu button:first-child { border-radius: 50px; } 
+.user-content .header span, .user-content.profile .meta .badge span, .user-content.profile .meta .joined { color: #eee;} 
+#user-friends .list .row { border-radius: 300px; }
+.user-content.profile .meta .link .url a, .user-content.profile .meta .link .url a:visited, .user-content.profile .points .label { color: #8e4386 !important; }
+.user-content.profile .points .label { color: #12A9E0; text-transform: uppercase; }
+.dropdown dd .row { background: rgba(0,0,0,0.5) !important; }
+#user-menu .item .label { top: 7px !important; } 
+.experience .xp .next-level, .app-right .friends .list .row .room { color: #FFFFFF !important; }
+#user-lists .list .user:hover {
+    background: rgba(0,0,0,.8) !important; }
+
+/* Barra de EXP */
+
+.icon-badge-pp, .icon-pp-small {
+    filter: hue-rotate(10deg);
+}
+.experience .xp .bar .progress,
+#footer-user .info .meta div.bar .progress {
+   
+}
+.icon.icon-arrow-down-blue,
+.icon.icon-check-blue {
+    filter: hue-rotate(820deg) !important;
+}
+.icon-badge-pp, .icon-pp-small {
+    filter: hue-rotate(71deg);
+}
+.experience .xp .bar .progress {
+    background: linear-gradient(hsl(306, 36%, 41%), hsl(306, 59%, 31%));
+}
+#footer-user .info .bar .progress {
+    background: rgba(142, 67, 134, 1);
+}
+
+
+/* Room Info / Room Settings */
+
+#room-info { opacity:  .90; }
+#room-info .button.disabled { background: linear-gradient(to bottom,rgba(98, 27, 16, 1) 0,rgba(226, 37, 0, 0.73) 100%);
+box-shadow: 0 0 10px rgba(147, 31, 13, 1) !important;}
+#room-info .button.enabled { background: linear-gradient(to bottom, rgba(24, 24, 24, 0.76) 0px, #808080 100%) repeat scroll 0% 0% rgba(0, 0, 0, 0.42);
+box-shadow: 0 0 15px #808080 !important; }
+#room-info .button.enabled { background: linear-gradient(to bottom,rgba(18, 84, 105, 1) 0,rgba(0, 197, 255, 0.73) 100%); }
+.app-header, .in-room, #room-info .edit { background: linear-gradient(to bottom,rgba(255, 255, 255, 0.05) 0,rgba(0, 0, 0, 0.75) 100%) !important; }
+#room-info .lock-toggle, #room-info .cycle-toggle { background: linear-gradient(to top,rgba(77, 77, 77, 1) 0,rgba(15, 15, 30, 1) 100%); }
+#room-settings { background : black-transparent; opacity: 0.9;  text-shadow: 1px 1px #000;  };
+#room-settings-menu .item.selected { background-color: rgba(213, 28, 28, 0.22) !important;
+background: linear-gradient(to right,rgba(255, 118, 118, 0.05) 0,rgba(255, 0, 0, 0.49) 100%) !important; }
+#room-settings-menu { width: 220px;height: 100%;background: black; }
+#room-settings-menu .title { position: relative;margin: 20px 10px 20px;width: 200px;color: #FFFFFF;font-size: 13px; }
+#room-settings-menu .item.selected { background: linear-gradient(to bottom,rgba(0, 0, 0, 0.8) 0,rgba(188, 18, 52, 1) 100%) !important; box-shadow: 0 0 10px #FF0000 !important;}
+#room-settings .general-settings .option.enabled>button.off {
+    background: linear-gradient(hsla(348, 6%, 18%, 0.78), hsla(348,4%, 5%, 0.91));}
+#room-settings .general-settings .option button {
+    background: linear-gradient(hsla(348, 6%, 18%, 0.78), hsla(348, 4%, 5%, 0.91));}
+#room-settings .general-settings .option button.off {
+    background: linear-gradient(hsla(348, 53%, 51%, 10.78), hsla(348, 61%, 18%, 0.95));}
+#room-settings .general-settings .option.enabled>button.on {
+    background: linear-gradient(hsl(348, 78%, 26%), hsl(348, 89%, 15%));}
+#room-settings-menu .item.selected {
+    background: linear-gradient(hsla(348, 53%, 51%, 10.78), hsla(348, 61%, 18%, 0.95));}
+.dropdown {
+    background: linear-gradient(hsla(348, 6%, 18%, 0.78), hsla(348, 4%, 5%, 0.91)) !important;}
+.dropdown dd {
+    background: hsla(348, 0%, 5%, 0.8) !important;}
+.dropdown dt {
+    -webkit-box-shadow: inset -39px 0 0 0 #bc1234;
+    -moz-box-shadow: inset -39px 0 0 0 #bc1234;
+    box-shadow: inset -39px 0 0 0 #bc1234;}
+
+
+/* Botões e menus de diálogo ! */
+
+.dialog-frame .button { background: rgba(24, 24, 24, 0.44); }
+.dialog-frame .button.cancel { background: linear-gradient(to top,rgba(77, 77, 77, 1) 0,rgba(15, 15, 30, 1) 100%) !important;
+color: #808691;  box-shadow: 0 0 10px #313131 !important; }
+.dialog.destructive .button.submit {
+color: #eee;
+background: #000000;
+background: -moz-linear-gradient(top,#000000 0,#000000 100%);
+background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#000000),color-stop(100%,#000000));
+background: -webkit-linear-gradient(top,#000000 0,#000000 100%);
+background: -o-linear-gradient(top,#000000 0,#000000 100%);
+background: -ms-linear-gradient(top,#000000 0,#000000 100%);
+background: linear-gradient(to bottom,rgba(142, 67, 134, 1) 0,rgba(142, 67, 134, 0.5) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000', GradientType=0);
+box-shadow: 0 0 4px rgba(0, 0, 0, 1) !important; }
+.dialog-frame .button.cancel { color: #000;
+background: linear-gradient(to top,rgba(77, 77, 77, 1) 0,rgba(15, 15, 30, 1) 100%) !important; 
+box-shadow: 0 0 4px #000 !important; }
+#info_dialog,  .dialog-body, #dialog-user-role .role-menu, .dialog-frame .title,.dialog-frame .title, .dialog-body 
+{  background: rgba(0,0,0,0.5) !important; } 
+.dialog { background: linear-gradient(to right,rgba(0, 0, 0, 0.6) 0,rgba(0, 0, 0, 0.76) 100%) !important; }
+#dialog-user-role .role-menu .menu li:hover {background: rgba(0, 0, 0, 0.89); box-shadow: inset 0 0px 50px #777777; }
+#dialog-user-role .role-menu .menu li { background : #000; } 
+.dialog.choice li:hover, .dialog.choice li.selected  { background: rgba(0, 0, 0, 0.89); box-shadow: inset 0 0px 50px #777777; }
+#dialog-ban-user .duration .toggle.selected, #dialog-mute-user .duration .toggle.selected 
+{ background: rgba(0, 0, 0, 0.89); box-shadow: inset 0 0px 50px #777777; }
+#dialog-preview .dialog-body .message {background: 000;}
+
+/* Menu ao clicar no seu nome ! */
+#footer-user .menu .item:hover { background: #000 !important; box-shadow: 0 0 15px #fff !important;}
+#footer-user .menu .item:first-child:hover { background: #000 !important; box-shadow: 0 0 15px #fff !important;}
+#footer-user.open-status .image, #footer-user.open-user .info{ background: rgba(0,0,0,0) !important; }
+#footer-user .back { background: linear-gradient(to top,rgba(77, 77, 77, 1) 0,rgba(15, 15, 30, 1) 100%) !important; }
+#footer { background: linear-gradient(to bottom,rgba(0, 0, 0, 0.25) 0,rgba(0, 0, 0, 0.75) 100%) !important; }
+
+/* Botões no menu superior que faltavam adicionar transparência ! */
+
+#history-button, #history-button .selected, .header-panel-button, #friends-button, #user-lists .list.staff .group 
+{ background: linear-gradient(to bottom,rgba(255, 255, 255, 0) 0,rgba(0, 0, 0, 0) 100%) !important; }
+#room .app-right { background: linear-gradient(to right,rgba(0, 0, 0, 0.6) 0,rgba(0, 0, 0, 0.76) 100%) !important; }
+#waitlist .list .user, .app-right .friends, .app-right .friends.has-requests .header, #chat-header
+{ background: rgba(10, 10, 10, 0) !important; }
+.header-panel-button.selected, #friends-button.selected  { opacity: .25; border-right: #0a0a0a 1px solid; } 
+#user-view { background: linear-gradient(to right,rgba(0, 0, 0, 0.98) 0,rgba(0, 0, 0, 0.85) 100%) !important; }
+#user-friends .list .row { background: linear-gradient(to right,rgba(0, 0, 0, 0.17) 0,rgba(255, 255, 255, 0.09) 100%) !important; }
+
+/* delete botao roxo */
+
+#chat .delete-button {
+    background: linear-gradient(hsl(290,30%,20%), hsl(290,30%,15%));
+    box-shadow: inset 0 0 0 1px hsl(290,30%,40%);
+    border-radius: 4px;
+    color: hsl(290,30%,40%);
+    transition: all .25s ease-in-out;
+}
+#chat .delete-button:hover {
+    background: linear-gradient(hsl(290,30%,50%), hsl(290,30%,40%));
+    box-shadow: inset 0 0 0 1px hsl(290,30%,70%);
+    color: hsl(290,30%,70%);
+}
+
+/* Avatares */
+#user-inventory .avatars .grid .cell { border-radius: 3000px; 
+background: linear-gradient(to bottom,#8e4386 0,#0D607E 56%,#894281 73%,#b756ac 100%)  !important; }
+#user-inventory .avatars .grid .cell:hover>.top, #user-avatars .my-avatars .grid .cell.selected .top {
+background: linear-gradient(to bottom,#ff5cde 0,rgba(219, 200, 149, 0.68) 56%,rgba(188, 18, 52, 0.42) 73%,rgba(209, 192, 146, 0.75) 100%) !important; }
+#user-menu .avatar { background: linear-gradient(to bottom,#d1c092 0,rgba(99, 29, 91, 0.33) 56%,#894281 73%,#dbc895 100%); }
+.user-content .grid .cell:hover>.top, #user-inventory .avatars .grid .cell.selected .top { background: linear-gradient(to bottom,#ff5cde 0,rgba(140, 81, 133, 0.33) 56%,#8c5185 73%,#631d5b 100%); }
+#user-menu .icon .icon-locked-grey {
+    bottom: 99px;  float: right; }
+
+#user-rollover.id-20574971:before{
+    content: 'PRO';
+    top: 119px;
+    left: 105px;
+    position: absolute;
+    display: inline-block; 
+    padding: 0 3px;
+    color: #aa74ff;
+    background: linear-gradient(rgba(170, 116, 255, 0.2), rgba(0, 102, 102, 0.2));
+    border-radius: 0px;
+    font-size: 10px;
+}
+#user-rollover.id-20574971 .meta:after{
+    content: 'em Mendigar';
+    color: #808691;
+    position: absolute;
+    top: 116px;
+    left: 134px;
+}
+
+/* parada de girar botao conf, botoes w,g,m, e lista de espera */
+
+#history-button .icon, 
+#footer-user .buttons .button.settings .icon {
+        -moz-transition:        transform 1s ease-in-out;
+        -webkit-transition:     transform 1s ease-in-out;
+        -o-transition:          transform 1s ease-in-out;
+        transition:             transform 1s ease-in-out;
+}
+#history-button .icon:hover, 
+#footer-user .buttons .button.settings .icon:hover
+{
+        -moz-transform:         rotate(360deg) !important; 
+        -webkit-transform:      rotate(360deg) !important;
+        -o-transform            rotate(360deg) !important;
+        transform:              rotate(360deg) !important;
+}
+#vote .label{
+display: none !important;
+}
+#vote .value{
+ top: 25px !important;
+}
+#vote .top,
+#woot .icon,
+#grab .icon,
+#meh .icon{
+height: 80px !important;
+width: 80px !important;
+margin: 0 !important;
+top: 10px !important;
+}
+#woot.crowd-response .icon{
+  background: url(https://i.imgur.com/qmNHN20.png) no-repeat;
+
+}
+
+#woot.crowd-response.disabled .icon,
+#woot.crowd-response.selected .icon {
+  background: url(https://i.imgur.com/qmNHN20.png) no-repeat;
+}
+
+#grab.crowd-response .icon{
+  background: url(https://i.imgur.com/qmNHN20.png) no-repeat;
+}
+
+#grab.crowd-response.disabled .icon,
+#grab.crowd-response.selected .icon {
+  background: url(https://i.imgur.com/qmNHN20.png) no-repeat;
+}
+
+#meh.crowd-response .icon{
+ background: url(https://i.imgur.com/qmNHN20.png) no-repeat;
+}
+
+#meh.crowd-response.disabled .icon,
+#meh.crowd-response.selected .icon {
+ background: url(https://i.imgur.com/qmNHN20.png) no-repeat;
+}
+#woot,
+#grab,
+#meh{
+  height: 80px !important;
+  width: 80px !important;
+  border-radius: 50%;
+  border: 2px solid;
+  bottom: 10px !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+#woot:hover,
+#grab:hover,
+#meh:hover {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+}
+#vote .bottom{
+ background: rgba(0, 0, 0, 0) !important;
+}
+#woot:not(.selected){
+  border: 2px solid #25b961;
+}
+#grab:not(.selected){
+  border: 2px solid #FF5CDE;
+}
+#meh:not(.selected){
+  border: 2px solid #c42e3b;
+}
+
+#woot.selected {
+    background: #25b961 !important;
+}
+#grab.selected{
+    background: #FF5CDE !important;
+}
+#meh.selected{
+    background: #c42e3b !important;
+}
+#vote .crowd-response.disabled .bottom {
+    background: rgba(0, 0, 0, 0.28);
+}
+
+
+
+#woot.crowd-response.disabled .icon:before,
+#woot.crowd-response.selected .icon:before {
+    content: url(https://i.imgur.com/qmNHN20.png);
+    position: absolute;
+    right: 0px;
+    padding: 0 0px;
+}
+#woot.crowd-response .icon:before {
+    content: url(https://i.imgur.com/qmNHN20.png);
+    position: absolute;
+    right: 0px;
+    padding: 0 0px;
+}
+#grab.crowd-response:not(.selected) .icon:after {
+    content: url(https://i.imgur.com/qmNHN20.png);
+    position: absolute;
+    right: 0px;
+    padding: 1px -1px;
+}
+#grab.crowd-response.disabled .icon:after {
+    content: url(https://i.imgur.com/qmNHN20.png);
+    position: absolute;
+    right: 0px;
+    padding: 1px -1px;
+}
+#meh.crowd-response.disabled .icon:after,
+#meh.crowd-response.selected .icon:after {
+    content: url(https://i.imgur.com/qmNHN20.png);
+    position: absolute;
+    right: 0px;
+    padding: 0 0;
+}
+#meh.crowd-response .icon:after {
+    content: url(https://i.imgur.com/qmNHN20.png);
+    position: absolute;
+    right: 0px;
+    padding: 0 0;
+}
+
+#dj-button {
+   background-color: rgba(0, 0, 0, 0.35) !important;
+}
+#dj-button .left{
+ background: rgba(0, 0, 0, 0) !important;
+}
+#dj-button span{
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+    opacity: 1.0;
+    width: 143px;
+}
+#dj-button {
+    width: 224px !important;
+}
+#dj-button {
+    border-radius: 50px;
+}
+#dj-button {
+    border: 2px solid #FF5CDE;
+}
+#dj-button.is-locked {
+    cursor: no-drop;
+}
+#dj-button.is-full, #dj-button.is-locked {
+border: 2px solid #585858;
+}
+#dj-button.is-leave, #dj-button.is-quit {
+border: 2px solid #c42e3b;
+}
+#dj-button:hover span{
+pointer-events: auto;
+}
+
+#dj-button,
+#dj-button span,
+#chat .un,
+#vote,
+#woot,
+#woot .top
+#grab,
+#grab .top
+#meh,
+#meh .top{
+    -webkit-transition:     all 0.3s ease;
+    -moz-transition:        all 0.3s ease;
+    -o-transition:          all 0.3s ease;
+    transition:             all 0.3s ease;
+}
+.votes-rs {
+    background-color: rgba(0, 0, 0, 0.50) !important;
+}
+#woot-rs .title {
+    background-color: #25b961;
+}
+#grab-rs .title {
+    background-color: #ff5cde;
+}
+#meh-rs .title {
+    background-color: #c42e3b;
+}
+.pop-menu.grab {
+    background: transparent;
+}
+.pop-menu.grab .bar {
+    background: linear-gradient(rgb(0, 0, 0), #000);
+    box-shadow: inset -157px 0 0 0 #000;
+}
+.pop-menu .bar .bar-divider {
+    background: #AAA;
+}
+.pop-menu.grab .menu::-webkit-scrollbar-thumb {
+    background: rgb(105, 68, 170) !important;
+}
+.pop-menu.grab .menu ul {
+    background: rgba(0,0,0,.5)
+}
+.pop-menu.grab .menu ul li:hover {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(255, 92, 222, .5)) !important
+}
+.pop-menu.grab .menu ul li.create:hover {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(255, 92, 222, .5)) !important
+}
+.pop-menu.grab .menu ul li:hover i {
+    filter: brightness(3);
+}
+
+/* Sombra das caixas de dialogo e bordas redondas ! */
+
+ #chat-input, .dialog-input-background, .input-background, #room-info .input-background, #input-room-name , 
+ #user-friends .list .row .buttons button, #user-avatars .tab-menu button, #user-friends .search, 
+#import-youtube .youtube-input, #import-youtube .button,#playlist-import-panel .button, 
+#user-friends .list .row .buttons button, #user-friends .tab-menu button, .tab-menu button,
+.user-content.profile .meta .blurb input, .user-content.profile .meta .blurb .box, #user-lists .list-header .input-background,
+.app-right .friends .list-header .input-background { border-radius: 30px;   background: #000; } 
+#search-bar , #filter-bar { border-radius: 30px; background: #000; }
+
+#user-lists .list .user.id-000000 .name:after,
+#user-rollover.id-000000 .meta .username:after,
+#chat [data-cid^='000000-'] .un:after {
+    content: "BOSS";
+    margin-left: 5px;
+    background: rgba(0,0,0,.3);
+    padding: 0px 5px;
+    border: 1px solid rgba(16, 153, 168, .5);
+    border-radius: 5px;
+    color: #1099a8;
+    font-size: 10px;
+}
+#user-rollover.id-12601578 .meta{
+    height: 128px !important;
+}
+#user-rollover.id-12601578:before{
+    content: 'CSS';
+    top: 118px;
+    left: 109px;
+    position: absolute;
+	display: inline-block; 
+	padding: 0 3px;
+    color: #8e4386;
+    background: linear-gradient(rgba(170, 116, 255, 0.2), rgba(0, 102, 102, 0.2));
+    border-radius: 4px;
+    font-size: 10px;
+}
+#user-rollover.id-12601578 .meta:after{
+    content: 'Theme';
+    color: #808691;
+    position: absolute;
+    top: 116px;
+    left: 134px;
+}
+
+/* Woot / Meh / Grab /  desativados! */
+
+#vote .crowd-response.disabled .bottom, #vote .crowd-response.disabled, #vote .crowd-response
+ { background: #222224; }
+#meh.crowd-response.disabled.active .bottom {
+background: linear-gradient(to bottom,rgba(102, 102, 102, 0) 0,rgba(196, 46, 59, 0.50) 100%); }
+#grab.crowd-response.disabled.active .bottom {
+background: linear-gradient(to bottom,rgba(102, 102, 102, 0) 0,rgba(170, 116, 255, 0.50) 100%); }
+#woot .bottom, #woot.selected {
+background: linear-gradient(to bottom,rgba(144, 173, 47, 0) 0px, #90ad2f 100%); }
+#woot.crowd-response.disabled.active .bottom {
+background: linear-gradient(to bottom,rgba(144, 173, 47, 0) 0,rgba(31, 255, 0, 0.50) 100%); }
+#grab .bottom, #grab.selected {
+background: linear-gradient(to bottom,rgba(170, 116, 255, 0) 0px, #aa74ff 100%); }
+#meh .bottom, #meh.selected {
+background: linear-gradient(to bottom,rgba(196, 46, 59, 0) 0px, #c42e3b 100%); }
+.pop-menu li:hover { background: #808080 !important; box-shadow: 0 0 15px #808080 !important; }
+.pop-menu { opacity: .85; border-radius: 30px 30px 0 0; } 
+.pop-menu .bar { background: linear-gradient(to top,rgba(77, 77, 77, 0.6) 0,rgba(15, 15, 30, 1) 100%); border-radius: 30px 30px 0 0; }
+.pop-menu ul { background: linear-gradient(to bottom,rgba(15, 15, 15, 0.5) 0,rgba(0, 0, 0, 0) 100%); } 
+
+/* Scroll Bar nova e personalizada */
+
+::-webkit-scrollbar { width: 13px !important; background: rgba(0, 0, 0, 0.72) !important; }
+::-webkit-scrollbar-thumb { border-radius: 10px !important; -webkit-box-shadow: inset 0 0 10px rgba(142, 67, 134, 1) !important;
+-moz-box-shadow: inset 0 0 10px rgba(142, 67, 134, 1) !important; box-shadow: inset 0 0 10px rgba(142, 67, 134, 1) !important; }
+::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(207, 207, 207, 0.6) !important;
+-moz-box-shadow: inset 0 0 6px rgba(207, 207, 207, 0.6) !important; box-shadow: inset 0 0 6px rgba(207, 207, 207, 0.6) !important;
+border-radius: 10px !important; }
+
+
+/* Itens relacionados aos botões do Footer User */
+
+#footer-user .buttons div.inventory.button:hover { background: linear-gradient(to bottom,#000000 0,rgba(179, 30, 31, 0.33) 56%,#000 73%,#000000 100%);  }
+#footer-user .buttons div.badge.button:hover { background: linear-gradient(to bottom,#000000 0,rgba(179, 30, 31, 0.33) 56%,#000 73%,#000000 100%);  }
+#footer-user .buttons div.profile.button:hover { background: linear-gradient(to bottom,#000000 0,rgba(179, 30, 31, 0.33) 56%,#000 73%,#000000 100%);  }
+#footer-user .buttons div.settings.button:hover { background: linear-gradient(to bottom,#000000 0,rgba(179, 30, 31, 0.33) 56%,#000 73%,#000000 100%);  }
+#footer-user .buttons div.store.button:hover { background: linear-gradient(to bottom,#000000 0,rgba(179, 30, 31, 0.33) 56%,#000 73%,#000000 100%);  }
+#footer-user .info { background: linear-gradient(to bottom,#000000 0,rgba(142, 75, 81, 1) 56%,#000000 73%,#000000 100%); }
+  
+
+/* Aleatoridades e frescuras  */
+
+.focused{
+  -moz-box-shadow: inset 0 0 0 0.2em #808080 !important;
+  -webkit-box-shadow: inset 0 0 0 0.2em #808080 !important;
+  box-shadow: inset 0 0 0 0.1em #808080 !important;
+}
+.user-content.profile .meta .blurb input { box-shadow: inset 0 0 0 2px #8e4386 !important; }
+
+#volume .slider .line,  .container .cap .slider .bar {
+    top: 10px;
+    height: 4px;
+    background: #c1bfbf;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+#user-settings   .container .cap .slider .bar {
+    top: 5px;
+    height: 5px;
+    background: #c1bfbf;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;    
+
+}
+
+#room-name {
+    overflow: visible;
+}
+#room-name  span:hover {
+    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #808080 , 0 0 70px #808080, 0 0 80px #808080 , 0 0 100px #808080 ;
+}
+
+#room-name .bar-value  {
+    display: inline-block;
+    /* top: -10px; */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* padding: 10px; */
+    border: none;
+    font: normal 18px/normal "Warnes", Helvetica, sans-serif;
+    color: rgba(255,255,255,1);
+    text-decoration: normal;
+    /*text-align: center;*/
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    white-space: pre;
+    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #808080  , 0 0 70px #808080  , 0 0 80px #808080  , 0 0 100px #808080 ;
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+#playback {
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+
+
+#info_dialog > .dialog-frame .button.submit { background: linear-gradient(to bottom,rgba(205, 27, 27, 0.8) 0,rgba(190, 34, 34, 1) 100%);
+box-shadow: 0 0 10px rgba(158, 30, 11, 1) !important; }
+.media-list .row.now-playing { border-bottom: #FC2457 2px solid !important; }
+
+#toast-notifications .notification {box-shadow: none !important;}
+#toast-notifications .notification .left { border-radius: 20px 0px 0px 20px !important; box-shadow: 0 0 10px rgba(124, 39, 107, 1) !important; background: linear-gradient(to bottom, #8e4386 0, #000 100%) !important; }
+#toast-notifications .notification .right:hover, #toast-notifications .notification .right { background: linear-gradient(to bottom, rgba(124, 39, 107, 0.81) 0%, rgb(124, 39, 107) 50%, rgba(124, 39, 107, 0.75) 100%) !important;}
+
+#user-inventory .avatars .grid .cell, #user-inventory .badges .grid .cell, .user-content .grid .cell { border-radius: 30px; }
+ -.user-content.communities .grid .cell  {border-radius: 30px; }
+
+#history-button  { background: linear-gradient(to bottom, #961D88 0, #41073C 100%); }
+#history-button i.icon.icon-history-white  {
+				-moz-transition-duration : 0.75s;
+				-moz-transition-property : -moz-transform;
+				-ms-transition-duration : 0.75s;
+				-ms-transition-property : -ms-transform;
+				-o-transition-duration : 0.75s;
+				-o-transition-property : -o-transform;
+				-webkit-transition-duration : 0.75s;
+				-webkit-transition-property : -webkit-transform;
+				overflow : hidden;
+				transition-duration : 0.75s;
+				transition-property : transform;
+			}
+			#history-button i.icon.icon-history-white:hover {
+				-moz-transform : rotate(360deg);
+				-ms-transform : rotate(360deg);
+				-o-transform : rotate(360deg);
+				-webkit-transform : rotate(360deg);
+				transform : rotate(360deg);
+			}
+
+#tooltip span{ background:#808080}
+#tooltip .corner{ border-top: 10px solid #808080; border-left: 10px solid #808080; }
+#tooltip.right .corner{ border-top:10px solid #808080; border-right:10px solid #808080; }
+
+/*snow V8 By: Galaxy*/
+
+#rcs-style-anchor-1{
+    background: rgba(10, 10, 10, 0.98);
+    background-image: url(https://dl.dropboxusercontent.com/s/f6vhruuab87biaa/Snow.png) !important;
+    background-position: 0 0 !important;
+    border-radius: 5px !important;
+    border: 1px solid #282c35 !important;
+    position: absolute;
+
+    height: 30px !important;
+    width: 30px !important;
+
+    right: 355px;
+    top: 100px !important;
+
+    z-index: 9;
+    cursor: pointer;
+}
+#rcs-style-anchor-1:active{
+    border: 1px solid #848a96 !important;
+}
+#rcs-style-anchor-1.toggled:hover{
+    background-position: -59px 0 !important;
+}
+#rcs-style-anchor-1.toggled{
+    background-position: -30px 0 !important;
+}
+#rcs-style-anchor-1 ~ #rcs-style-anchor-2{
+    display: block;
+}
+#rcs-style-anchor-1.toggled ~ #rcs-style-anchor-2{
+    display: none;
+}
+#rcs-style-anchor-2{
+    background-image: 
+    url('https://dl.dropboxusercontent.com/s/o65zr9aclxqlla1/s1.png'), 
+    url('https://dl.dropboxusercontent.com/s/x7woaa8zbcfspa0/s2.png'), 
+    url('https://dl.dropboxusercontent.com/s/73dmn5eon9cpajl/s3.png');
+    -webkit-animation: snow 15s linear infinite;
+    -moz-animation: snow 15s linear infinite;
+    -ms-animation: snow 15s linear infinite;
+    animation: snow 15s linear infinite;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+@keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+ 100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@-moz-keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@-webkit-keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+ 100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@-ms-keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+ 100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+#rcs-style-anchor-1:hover:before{
+    background-image: url(data:image/png;base64,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);
+    padding: 3px 6px;
+    color: transparent;
+    bottom: 30px;
+    position: absolute;
+    left: 15px;
+    width: 78px;
+    height: 26px;
+    font-family: Roboto,sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* fundo inventario */
+	
+#user-menu .avatar {
+    box-shadow: inset 0 0 30px rgba(0,0,0,.5);
+    -webkit-box-shadow: inset 0 0 30px rgba(0,0,0,.5);
+    background: url("https://imgur.com/M7UqacI.png");
+}
+
+.user-content .grid .cell .top {
+    background: url("https://imgur.com/M7UqacI.png") no-repeat !important;
+    background-size: 185px 175px !important;
+    box-shadow: inset 0 0 30px rgba(0,0,0,.5);
+    -webkit-box-shadow: inset 0 0 30px rgba(0,0,0,.5);
+
