@@ -345,62 +345,29 @@ box-shadow: 0 0 4px #000 !important; }
         -o-transform            rotate(360deg) !important;
         transform:              rotate(360deg) !important;
 }
-#vote .label{
-display: none !important;
-}
-#vote .value{
- top: 25px !important;
-}
-#vote .top,
-#woot .icon,
-#grab .icon,
-#meh .icon{
-height: 80px !important;
-width: 80px !important;
-margin: 0 !important;
-top: 10px !important;
-}
-#woot.crowd-response .icon{
-  background: url(https://i.imgur.com/qmNHN20.png) no-repeat;
 
+#vote #woot, #vote #grab, #vote #meh { 
+	background:transparent;
 }
 
-#woot.crowd-response.disabled .icon,
-#woot.crowd-response.selected .icon {
-  background: url(https://i.imgur.com/qmNHN20.png) no-repeat;
+.votes-rs {
+	background:rgba(0,0,0,0.6) !important;
 }
 
-#grab.crowd-response .icon{
-  background: url(https://i.imgur.com/qmNHN20.png) no-repeat;
-}
-
-#grab.crowd-response.disabled .icon,
-#grab.crowd-response.selected .icon {
-  background: url(https://i.imgur.com/qmNHN20.png) no-repeat;
-}
-
-#meh.crowd-response .icon{
- background: url(https://i.imgur.com/qmNHN20.png) no-repeat;
-}
-
-#meh.crowd-response.disabled .icon,
-#meh.crowd-response.selected .icon {
- background: url(https://i.imgur.com/qmNHN20.png) no-repeat;
-}
 #woot,
 #grab,
 #meh{
-  height: 80px !important;
-  width: 80px !important;
+  height: 79px !important;
+  width: 79px !important;
   border-radius: 50%;
   border: 2px solid;
-  bottom: 10px !important;
-  background-color: rgba(0, 0, 0, 0) !important;
+  bottom: 14px !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
 }
 #woot:hover,
 #grab:hover,
 #meh:hover {
-    background-color: rgba(0, 0, 0, 0.4) !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
 }
 #vote .bottom{
  background: rgba(0, 0, 0, 0) !important;
@@ -428,49 +395,8 @@ top: 10px !important;
     background: rgba(0, 0, 0, 0.28);
 }
 
-
-
-#woot.crowd-response.disabled .icon:before,
-#woot.crowd-response.selected .icon:before {
-    content: url(https://i.imgur.com/qmNHN20.png);
-    position: absolute;
-    right: 0px;
-    padding: 0 0px;
-}
-#woot.crowd-response .icon:before {
-    content: url(https://i.imgur.com/qmNHN20.png);
-    position: absolute;
-    right: 0px;
-    padding: 0 0px;
-}
-#grab.crowd-response:not(.selected) .icon:after {
-    content: url(https://i.imgur.com/qmNHN20.png);
-    position: absolute;
-    right: 0px;
-    padding: 1px -1px;
-}
-#grab.crowd-response.disabled .icon:after {
-    content: url(https://i.imgur.com/qmNHN20.png);
-    position: absolute;
-    right: 0px;
-    padding: 1px -1px;
-}
-#meh.crowd-response.disabled .icon:after,
-#meh.crowd-response.selected .icon:after {
-    content: url(https://i.imgur.com/qmNHN20.png);
-    position: absolute;
-    right: 0px;
-    padding: 0 0;
-}
-#meh.crowd-response .icon:after {
-    content: url(https://i.imgur.com/qmNHN20.png);
-    position: absolute;
-    right: 0px;
-    padding: 0 0;
-}
-
 #dj-button {
-   background-color: rgba(0, 0, 0, 0.35) !important;
+   background-color: rgba(0, 0, 0, 0.36) !important;
 }
 #dj-button .left{
  background: rgba(0, 0, 0, 0) !important;
@@ -488,16 +414,16 @@ top: 10px !important;
     border-radius: 50px;
 }
 #dj-button {
-    border: 2px solid #009cd1;
+    border: 1.5px solid #009cd1;
 }
 #dj-button.is-locked {
     cursor: no-drop;
 }
 #dj-button.is-full, #dj-button.is-locked {
-border: 2px solid #585858;
+border: 1.5px solid #585858;
 }
 #dj-button.is-leave, #dj-button.is-quit {
-border: 2px solid #c42e3b;
+border: 1.5px solid #c42e3b;
 }
 #dj-button:hover span{
 pointer-events: auto;
@@ -555,8 +481,119 @@ pointer-events: auto;
 .pop-menu.grab .menu ul li:hover i {
     filter: brightness(3);
 }
-
-
+.icon-woot {
+    background-image: url(https://rawgit.com/Satskhi/EDTRCS/master/images/Icons/Woot.png);
+    background-position: 0px 0px;
+}
+#woot.crowd-response.disabled .icon:before,
+#woot.crowd-response.selected .icon:before {
+    content: url(https://rawgit.com/Satskhi/EDTRCS/master/images/Icons/WootW.png);
+    position: absolute;
+    right: 0px;
+    padding: 0 1px;
+}
+#woot.crowd-response .icon:before {
+    content: url(https://rawgit.com/Satskhi/EDTRCS/master/images/Icons/Woot.png);
+    position: absolute;
+    right: 0px;
+    padding: 0 0px;
+}
+#woot:hover .icon:before {
+    -webkit-animation-name: woot;
+    animation-name: woot;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+#woot .icon:before {
+    opacity: 0;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes woot {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-1em);
+    transform: translateY(-1em);
+  }
+}
+#grab.crowd-response:not(.selected) .icon:after {
+    content: url(https://rawgit.com/Satskhi/EDTRCS/master/images/Icons/Grab.png);
+    position: absolute;
+    right: 0px;
+    padding: 1px 1px;
+}
+#grab.crowd-response.disabled .icon:after {
+    content: url(https://rawgit.com/Satskhi/EDTRCS/master/images/Icons/GrabW.png);
+    position: absolute;
+    right: 0px;
+    padding: 1px 0px;
+}
+#grab:hover .icon:after {
+    -webkit-animation-name: grab;
+    animation-name: grab;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+#grab .icon:after {
+    opacity: 0;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes grab {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateZ(0);
+    transform: scale(1) translateZ(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.5) translateZ(0);
+    transform: scale(1.5) translateZ(0);
+  }
+}
+#meh.crowd-response.disabled .icon:after,
+#meh.crowd-response.selected .icon:after {
+    content: url(https://rawgit.com/Satskhi/EDTRCS/master/images/Icons/MehW.png);
+    position: absolute;
+    right: 0px;
+    padding: 0 1px;
+}
+#meh.crowd-response .icon:after {
+    content: url(https://rawgit.com/Satskhi/EDTRCS/master/images/Icons/Meh.png);
+    position: absolute;
+    right: 0px;
+    padding: 0 1px;
+}
+#meh:hover .icon:after {
+    -webkit-animation-name: meh;
+    animation-name: meh;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+#meh .icon:after {
+    opacity: 0;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes meh {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(1em);
+    transform: translateY(1em);
+  }
+}
 
 /* Sombra das caixas de dialogo e bordas redondas ! */
 
