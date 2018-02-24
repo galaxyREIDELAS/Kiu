@@ -640,7 +640,23 @@ pointer-events: auto;
 
 /* Sombra das caixas de dialogo e bordas redondas ! */
 
- #chat-input, .dialog-input-background, .input-background, #room-info .input-background, #input-room-name , 
+#chat-input {
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.20);
+    -webkit-box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.20);
+}
+
+#chat-input.focused {
+    -webkit-box-shadow: 0 0 0 1px #0ab5af !important;
+            box-shadow: 0 0 0 1px #0ab5af !important;
+}
+
+.focused {
+    background: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 3px rgb(66, 165, 220);
+    -webkit-box-shadow: 0 0 3px rgb(66, 165, 220);
+}
+
  #user-friends .list .row .buttons button, #user-avatars .tab-menu button, #user-friends .search, 
 #import-youtube .youtube-input, #import-youtube .button,#playlist-import-panel .button, 
 #user-friends .list .row .buttons button, #user-friends .tab-menu button, .tab-menu button,
@@ -670,7 +686,6 @@ pointer-events: auto;
     top: 116px;
     left: 134px;
 }
-
 
 /* Woot / Meh / Grab /  desativados! */
 
