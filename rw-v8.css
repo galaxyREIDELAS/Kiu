@@ -831,8 +831,8 @@ box-shadow: 0 0 10px rgba(158, 30, 11, 1) !important; }
 .media-list .row.now-playing { border-bottom: #FC2457 2px solid !important; }
 
 #toast-notifications .notification {box-shadow: none !important;}
-#toast-notifications .notification .left { border-radius: 20px 0px 0px 20px !important; box-shadow: 0 0 10px rgba(0, 156, 209, 1) !important; background: linear-gradient(to bottom, #5fc1e2 0, #000 100%) !important; }
-#toast-notifications .notification .right:hover, #toast-notifications .notification .right { background: linear-gradient(to bottom, rgba(0, 156, 209, 0.81) 0%, rgb(0, 156, 209) 50%, rgba(0, 156, 209, 0.75) 100%) !important;}
+#toast-notifications .notification .left { border-radius: 20px 0px 0px 20px !important; box-shadow: 0 0 10px rgba(0, 156, 209, 1) !important; background: linear-gradient(to bottom, ##5fc1e2 0, #000 100%) !important; }
+#toast-notifications .notification .right:hover, #toast-notifications .notification .right { background: linear-gradient(to bottom, rgba(0, 156, 209, 0.81) 0%, rgb(64, 64, 64) 50%, rgba(0, 0, 0, 0.75) 100%) !important;}
 
 
 #user-inventory .avatars .grid .cell, #user-inventory .badges .grid .cell, .user-content .grid .cell { border-radius: 30px; }
