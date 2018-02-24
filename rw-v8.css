@@ -718,6 +718,27 @@ background: linear-gradient(to bottom,rgba(196, 46, 59, 0) 0px, #c42e3b 100%); }
 border-radius: 15px !important; }
 
 /* Itens relacionados aos botões do Footer User */
+#dj-button .left:hover {
+    animation: pulse .5s ease
+}
+
+#footer-user .buttons .button.settings:hover .icon {
+    -moz-transform: rotate(360deg)!important;
+    -webkit-transform: rotate(360deg)!important;
+    transform: rotate(360deg)!important
+}
+
+@keyframes pulse {
+    from,to {
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1)
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05,1.05,1.05);
+        transform: scale3d(1.1,1.1,1.1)
+    }
+}
 
 #footer-user .buttons div.inventory.button:hover { background: linear-gradient(to bottom,#000000 0,rgba(0, 156, 209, 0.33) 56%,#000 73%,#000000 100%);  }
 #footer-user .buttons div.badge.button:hover { background: linear-gradient(to bottom,#000000 0,rgba(0, 156, 209, 0.33) 56%,#000 73%,#000000 100%);  }
