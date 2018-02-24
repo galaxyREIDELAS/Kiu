@@ -1,6 +1,9 @@
 
 /* galaxy  */
-
+.subscribe-button {
+    background: hsla(220, 0%, 5%, 0.1) !important;}
+.subscribe-button:hover {
+    background: rgba(73, 73, 73, 0.25) !important;}
 .userInfo.dj .votedBackgroundColor { background-color: #721022; font-weight: bold; }
 .userInfo.woot .votedBackgroundColor { background-color: #721022; }
 .userInfo.meh .votedBackgroundColor { background-color: #721022; }
