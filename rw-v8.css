@@ -718,8 +718,8 @@ pointer-events: auto;
 }
 
 #chat-input.focused {
-    -webkit-box-shadow: 0 0 0 1px #0ab5af !important;
-            box-shadow: 0 0 0 1px #0ab5af !important;
+    -webkit-box-shadow: 0 0 0 1px #0095d1 !important;
+            box-shadow: 0 0 0 1px #0095d1 !important;
 }
 
 .focused {
