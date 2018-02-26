@@ -327,6 +327,18 @@ box-shadow: 0 0 4px #000 !important; }
 
 /* Avatares */
 
+#user-view,
+#dashboard,
+#room-settings,
+#media-panel,
+#playlist-panel,
+#history-panel {
+    background: linear-gradient(hsla(210, 10%, 3%, .9), hsla(210, 10%, 3%, .9)) !important;}
+#user-menu,
+#room-settings-menu,
+#playlist-menu {
+    background: linear-gradient(to right, hsla(210, 10%, 10%, 0), hsla(210, 10%, 10%, .2));}
+
 .user-content .grid .cell:hover>.top, #user-inventory .avatars .grid .cell.selected .top { background: linear-gradient(to bottom,#0095d1 0,rgba(0, 149, 209, 0.33) 56%,#0095d1 73%,#0095d1 100%); }
 #user-menu .icon .icon-locked-grey {
     bottom: 99px;  float: right; }
