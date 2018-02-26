@@ -682,7 +682,6 @@ pointer-events: auto;
 #user-friends .list .row .buttons button, #user-friends .tab-menu button, .tab-menu button,
 .user-content.profile .meta .blurb input, .user-content.profile .meta .blurb .box, #user-lists .list-header .input-background,
 .app-right .friends .list-header .input-background { border-radius: 30px;   background: #000; } 
-#search-bar , #filter-bar { border-radius: 30px; background: #000; }
 }
 #user-rollover.id-12601578 .meta{
     height: 128px !important;
