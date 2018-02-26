@@ -831,14 +831,15 @@ border-radius: 15px !important; }
 .user-content.profile .meta .blurb input { box-shadow: inset 0 0 0 2px #0095d1 !important; }
 
 #volume .slider .line,  .container .cap .slider .bar {
-    top: 11px;
-    height: 2px;
+    top: 12px;
+    height: 1px;
     background: #0095d1;
     display: block;
     overflow: hidden;
     cursor: pointer;
 
 }
+
 
 #room-name {
     overflow: visible;
