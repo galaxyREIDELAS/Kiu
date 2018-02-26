@@ -102,6 +102,48 @@ box-shadow: 0 0 10px #000 !important; }
 
 /* Itens relacionados ao Menu de comunidades! */
 
+#header-panel-bar {
+  background:transparent;
+}
+
+.header-panel-button {
+  border:none;
+  transition:.3s;
+  box-shadow:inset 0 -2px 0 #000;
+  width:69px !important;
+}
+
+#users-button{left:69px !important;}
+#waitlist-button{left:138px !important;}
+#friends-button{left:207px !important;}
+#rcs-appright-button{left:276px !important;}
+
+.header-panel-button:hover,
+.header-panel-button.selected {
+  background:rgba(0,0,0,.2);
+}
+
+.header-panel-button.selected {
+  box-shadow:inset 0 -2px 0 #000, inset 0 0 10px #000;
+}
+
+.header-panel-button::after {
+  position:absolute;
+  font-family:FontAwesome;
+  font-size:20px;
+  content:"\f0d7";
+  bottom:-12px;
+  color:#000;
+  transition:.3s;
+  opacity:0;
+  right:42%;
+}
+
+#friends-button.notify .request-count {
+  background:rgba(41, 128, 185,.5);
+  box-shadow:inset 0 0 0 1px #2980b9;
+}
+
 #dashboard .search { border-radius: 20px; background:  #000; }
 #dashboard { background-color: rgba(0, 0, 0, 0.89) !important;  }
 .communities .grid .cell {border-radius: 20px; }
