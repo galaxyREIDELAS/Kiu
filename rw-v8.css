@@ -259,7 +259,7 @@ box-shadow: 0 0 7px rgba(0, 0, 0, 1) !important; }
     filter: hue-rotate(1780deg) !important;
 }
 .icon-badge-pp, .icon-pp-small {
-    filter: hue-rotate(1780deg);
+    filter: hue-rotate(360deg);
 }
 .experience .xp .bar .progress {
     background: linear-gradient(hsl(195, 100%, 41%), hsl(195, 100%, 41%));
