@@ -270,6 +270,43 @@ box-shadow: 0 0 7px rgba(0, 0, 0, 1) !important; }
 
 /* Room Info / Room Settings */
 
+#room-settings .general-settings .value {
+    text-shadow: 1px;
+    text-align: center;
+    overflow: hidden!important;
+}
+#room-settings .general-settings .edit i {
+    display: none;
+}
+#room-settings .general-settings .description {
+    background: rgba(255, 255, 255, 0.08)!important;
+    text-align: center;
+    width: 80% !important;
+    border-radius: 8px;
+    margin-left: 9%;
+    height: 50% !important;
+}
+
+#room-settings .general-settings .description .input-background {
+    height: 260px !important;
+    width: 796px !important;
+
+}
+#room-settings .general-settings .panel .title {
+    display: none
+}
+#room-settings .general-settings .panel .title {
+    display: none;
+}
+#room-settings .general-settings .description .value a:nth-of-type(7) {
+    display: none;
+
+}
+#room-settings-menu {
+    display: none;
+    width: 0px;
+    height: 0px;
+}
 #room-info { opacity:  .90; }
 #room-info .button.disabled { background: linear-gradient(to bottom,rgba(98, 27, 16, 1) 0,rgba(0, 156, 209, 0.73) 100%);
 box-shadow: 0 0 10px rgba(147, 31, 13, 1) !important;}
