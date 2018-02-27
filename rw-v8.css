@@ -270,6 +270,17 @@ box-shadow: 0 0 7px rgba(0, 0, 0, 1) !important; }
 
 /* Room Info / Room Settings */
 
+#room-settings .general-settings .welcome .value {
+    width: 97.7% !important;
+    height: 100% !important;
+}
+#room-settings .general-settings .welcome {
+    text-align: center;
+    width: 80% !important;
+    border-radius: 30px;
+    margin-left: 9%;
+    height: 50% !important;
+}
 #room-settings .general-settings .value {
     text-shadow: 1px;
     text-align: center;
